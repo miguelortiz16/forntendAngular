@@ -1,0 +1,186 @@
+<div class=" ">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center ">
+                    <h3 class="title">EMPLEADOS</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col lg-12">
+         <div class="card">
+             <div class="card-body">
+                 <h5 class="title">
+                    {{action|uppercase}} EMPLEADOS
+                 </h5>
+
+                 <form  [formGroup]="form" (ngSubmit)="saveEmployee()">
+                    
+                      
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('idDepartment')?.valid "  [class.redicon]="this.form.get('idDepartment')?.invalid && this.form.get('idDepartment')?.touched " class="input-group-text"><i class="fas fa-audio-idDepartment"></i></span>
+                        <input type="text" formControlName="idDepartment" class="form-control" placeholder="DEPARTAMENTO">
+                      </div>
+
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('firstName')?.valid "  [class.redicon]="this.form.get('firstName')?.invalid && this.form.get('firstName')?.touched " class="input-group-text"><i class="fas fa-audio-firstName"></i></span>
+                        <input type="text" formControlName="firstName" class="form-control" placeholder="primer nombre">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('secondName')?.valid "  [class.redicon]="this.form.get('secondName')?.invalid && this.form.get('secondName')?.touched " class="input-group-text"><i class="fas fa-audio-secondName"></i></span>
+                        <input type="text" formControlName="secondName" class="form-control" placeholder="segundo nombre">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('surName')?.valid "  [class.redicon]="this.form.get('surName')?.invalid && this.form.get('surName')?.touched " class="input-group-text"><i class="fas fa-audio-surName"></i></span>
+                        <input type="text" formControlName="surName" class="form-control" placeholder="primer apellido">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('secondSurName')?.valid "  [class.redicon]="this.form.get('secondSurName')?.invalid && this.form.get('secondSurName')?.touched " class="input-group-text"><i class="fas fa-audio-secondSurName"></i></span>
+                        <input type="text" formControlName="secondSurName" class="form-control" placeholder="segundo apellido">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('professionalCard')?.valid "  [class.redicon]="this.form.get('professionalCard')?.invalid && this.form.get('professionalCard')?.touched " class="input-group-text"><i class="fas fa-audio-professionalCard"></i></span>
+                        <input type="text" formControlName="professionalCard" class="form-control" placeholder="carta profesional">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('address')?.valid "  [class.redicon]="this.form.get('address')?.invalid && this.form.get('address')?.touched " class="input-group-text"><i class="fas fa-audio-address"></i></span>
+                        <input type="text" formControlName="address" class="form-control" placeholder="direccion">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('phone')?.valid "  [class.redicon]="this.form.get('phone')?.invalid && this.form.get('phone')?.touched " class="input-group-text"><i class="fas fa-audio-phone"></i></span>
+                        <input type="text" formControlName="phone" class="form-control" placeholder="telefono">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('mobile')?.valid "  [class.redicon]="this.form.get('mobile')?.invalid && this.form.get('mobile')?.touched " class="input-group-text"><i class="fas fa-audio-mobile"></i></span>
+                        <input type="text" formControlName="mobile" class="form-control" placeholder="celular">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('emailId')?.valid "  [class.redicon]="this.form.get('emailId')?.invalid && this.form.get('emailId')?.touched " class="input-group-text"><i class="fas fa-audio-emailId"></i></span>
+                        <input type="text" formControlName="emailId" class="form-control" placeholder="correo">
+                      </div>
+  
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('approverId')?.valid "  [class.redicon]="this.form.get('approverId')?.invalid && this.form.get('approverId')?.touched " class="input-group-text"><i class="fas fa-audio-approverId"></i></span>
+                        <input type="text" formControlName="approverId" class="form-control" placeholder="aprobacion id">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('directorId')?.valid "  [class.redicon]="this.form.get('directorId')?.invalid && this.form.get('directorId')?.touched " class="input-group-text"><i class="fas fa-audio-directorId"></i></span>
+                        <input type="text" formControlName="directorId" class="form-control" placeholder="direccion">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('active')?.valid "  [class.redicon]="this.form.get('active')?.invalid && this.form.get('active')?.touched " class="input-group-text"><i class="fas fa-audio-active"></i></span>
+                        <input type="text" formControlName="active" class="form-control" placeholder="activo">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('creationUser')?.valid "  [class.redicon]="this.form.get('creationUser')?.invalid && this.form.get('creationUser')?.touched " class="input-group-text"><i class="fas fa-audio-creationUser"></i></span>
+                        <input type="text" formControlName="creationUser" class="form-control" placeholder="creacion usuario">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('creationDate')?.valid "  [class.redicon]="this.form.get('creationDate')?.invalid && this.form.get('creationDate')?.touched " class="input-group-text"><i class="fas fa-audio-creationDate"></i></span>
+                        <input type="text" formControlName="creationDate" class="form-control" placeholder="fecha creacion">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('lastModificationUser')?.valid "  [class.redicon]="this.form.get('lastModificationUser')?.invalid && this.form.get('lastModificationUser')?.touched " class="input-group-text"><i class="fas fa-audio-lastModificationUser"></i></span>
+                        <input type="text" formControlName="lastModificationUser" class="form-control" placeholder="ultima modificacion usuario">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('lastModificationDate')?.valid "  [class.redicon]="this.form.get('lastModificationDate')?.invalid && this.form.get('lastModificationDate')?.touched " class="input-group-text"><i class="fas fa-audio-lastModificationDate"></i></span>
+                        <input type="text" formControlName="lastModificationDate" class="form-control" placeholder="ultima modificacion fecha">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('rolCat')?.valid "  [class.redicon]="this.form.get('rolCat')?.invalid && this.form.get('rolCat')?.touched " class="input-group-text"><i class="fas fa-audio-rolCat"></i></span>
+                        <input type="text" formControlName="rolCat" class="form-control" placeholder="rol cat">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('hierarchyLevel')?.valid "  [class.redicon]="this.form.get('hierarchyLevel')?.invalid && this.form.get('hierarchyLevel')?.touched " class="input-group-text"><i class="fas fa-audio-hierarchyLevel"></i></span>
+                        <input type="text" formControlName="hierarchyLevel" class="form-control" placeholder="nivel jerárquico">
+                      </div>
+                      
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('expeditionPlaceId')?.valid "  [class.redicon]="this.form.get('expeditionPlaceId')?.invalid && this.form.get('expeditionPlaceId')?.touched " class="input-group-text"><i class="fas fa-audio-expeditionPlaceId"></i></span>
+                        <input type="text" formControlName="expeditionPlaceId" class="form-control" placeholder="lugar de expedicion">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('typeIdentification')?.valid "  [class.redicon]="this.form.get('typeIdentification')?.invalid && this.form.get('typeIdentification')?.touched " class="input-group-text"><i class="fas fa-audio-typeIdentification"></i></span>
+                        <input type="text" formControlName="typeIdentification" class="form-control" placeholder="tipo de identificacion">
+                      </div>
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('numberIdentification')?.valid "  [class.redicon]="this.form.get('numberIdentification')?.invalid && this.form.get('numberIdentification')?.touched " class="input-group-text"><i class="fas fa-audio-numberIdentification"></i></span>
+                        <input type="text" formControlName="numberIdentification" class="form-control" placeholder="numero de identificacion">
+                      </div>
+
+                      <div class="input-group input-group-lg mb-3">
+                        <span [class.greenicon]="this.form.get('idCity')?.valid "  [class.redicon]="this.form.get('idCity')?.invalid && this.form.get('idCity')?.touched " class="input-group-text"><i class="fas fa-audio-idCity"></i></span>
+                        <input type="text" formControlName="idCity" class="form-control" placeholder="id ciudad">
+                      </div>
+
+                      
+                    
+                     
+                     
+                    
+
+                     <div class="d-grid gap-2">
+                        <button [disabled]="this.form.invalid" type="submit" class="btn btn-primary  btn-lg">
+                          Aceptar
+                         </button>
+                     </div>
+                  
+                 </form>
+             </div>
+         </div>
+        </div>
+
+        <div class="col lg-12">
+            <div class="card lg-12">
+                <div class="card-body">
+                    <h5 class="title">
+                       LISTAR EMPLEADOS
+                    </h5>
+
+                    <table class="table ">
+                        <tbody>
+                         
+                            <tr *ngFor="let item of listEmployees; let i =index">
+                                <td> {{item.idDepartment}} </td>
+                                <td>{{item.firstName}} </td>
+                                <td> {{item.secondName}}</td>
+                                <td>{{item.surName}}</td>
+
+                                <td> {{item.secondSurName}}</td>
+                                <td>{{item.professionalCard}}</td>
+                                <td> {{item.address}}</td>
+                                <td> {{item.phone}}</td>
+                                <td> {{item.mobile}}</td>
+                                <td> {{item.emailId}}</td>
+                                <td> {{item.approverId}}</td>
+                                <td> {{item.directorId}}</td>
+                                <td> {{item.active}}</td>
+                                <td> {{item.creationUser}}</td>
+                                <td> {{item.creationDate}}</td>
+                                <td> {{item.lastModificationUser}}</td>
+                                <td> {{item.lastModificationDate}}</td>
+                                <td> {{item.rolCat}}</td>
+                                <td> {{item.hierarchyLevel}}</td>
+                                <td> {{item.expeditionPlaceId}}</td>
+                                <td> {{item.typeIdentification}}</td>
+                                <td> {{item.numberIdentification}}</td>
+                                <td> {{item.idCity}}</td>
+                                <td> <i  (click)="editEmployee(item)" class="far fa-edit text-info"></i></td>
+                                <td><i (click)="deleteEmployee(item.id)" class="far fa-trash-alt text-danger"></i> </td>
+                          
+                               
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
