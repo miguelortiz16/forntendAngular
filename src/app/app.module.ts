@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeesComponent } from './components/courses/employees.component';
+import { EmployeesComponent } from './components/employee/employees.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule } from '@angular/common/http'; 
 import { ToastrModule } from 'ngx-toastr';
